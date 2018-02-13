@@ -1,0 +1,81 @@
+
+//			if (myHand == comHand) {
+//				System.out.println("¹«");
+//			} else if (myHand == 1) {
+//				if (comHand == 2) {
+//					System.out.println("ÆÐ");
+//				} else {
+//					System.out.println("½Â");
+//				}
+//			} else if (myHand == 2) {
+//				if (comHand == 1) {
+//					System.out.println("½Â");
+//				} else {
+//					System.out.println("ÆÐ");
+//				}
+//			} else {
+//				if (comHand == 1) {
+//					System.out.println("ÆÐ");
+//				} else {
+//					System.out.println("½Â");
+//				}
+//			}
+import java.util.Random;
+import java.util.Scanner;
+
+public class RSPMain {
+	public static void main(String[] args) throws Exception {
+		// Å°º¸µå ÀÔ·Â¹ÞÀ» ÁØºñ
+		Scanner keyboard = new Scanner(System.in);
+
+		// ·£´ý »ÌÀ» ÁØºñ
+		Random r = new Random();
+
+		int comHand = 0;
+		int myHand = 0;
+		int result = 0;
+		String[] handTable = {"", "°¡À§", "¹ÙÀ§", "º¸"};
+		int win = 0;
+		// ¹«ÇÑ¹Ýº¹
+		while (true) {
+			System.out.println("-----------");
+			System.out.println("1. °¡À§");
+			System.out.println("2. ¹ÙÀ§");
+			System.out.println("3. º¸");
+			System.out.println("-----------");
+			System.out.print("¹¹ : ");
+			myHand = keyboard.nextInt();
+			comHand = r.nextInt(3) + 1; // 1 ~ 3
+			System.out.printf("³ª : %s\n", handTable[myHand]);
+			System.out.printf("ÄÄ : %s\n", handTable[comHand]);
+			result = myHand - comHand;
+			if (result == 0) {
+				System.out.println("¹«½ÂºÎ");
+			} else if(result == -1 || result == 2) {
+				System.out.println("ÆÐ");
+				System.out.printf("%d½Â\n", win);
+				Thread.sleep(5000);
+				break;
+			} else {
+				win++;
+				System.out.println("½Â");
+			}
+
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
