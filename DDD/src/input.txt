@@ -1,0 +1,9 @@
+Canvas size: 600 x 400
+Background color: 0xfa023d
+Number of frames: 5
+No.: width height alpha duration
+1: 360 360 yes 150
+2: 360 360 yes 120
+3: 360 360 yes 110
+4: 360 360 no 140
+5: 360 360 yes 115
